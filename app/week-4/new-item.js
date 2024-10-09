@@ -15,7 +15,6 @@ export default function NewItem() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert(`Quantity: ${quantity}`);
     setQuantity(1); 
   };
 
@@ -30,7 +29,7 @@ export default function NewItem() {
         >
           -
         </button>
-        <span className="text-lg font-semibold">{quantity}</span>
+        <span className="font-semibold text-black">{quantity}</span>
         <button
           type="button"
           onClick={increment}
@@ -42,7 +41,7 @@ export default function NewItem() {
       </div>
       <button
         type="submit"
-        className="mt-4 px-6 py-2 bg-orange-500 text-white rounded-md hover:bg-orange-600"
+        className="mt-4 px-6 py-2 bg-orange-500 text-black rounded-md hover:bg-orange-600"
       >
         Submit
       </button>
