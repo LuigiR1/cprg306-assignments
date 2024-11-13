@@ -13,6 +13,7 @@ export default function Home() {
         <Link href="./week-6/" className="font-mono underline text text-orange-400 hover:text-orange-600">Week-6 Assignment</Link>
         <Link href="./week-7/" className="font-mono underline text text-orange-400 hover:text-orange-600">Week-7 Assignment</Link>
         <Link href="./week-8/" className="font-mono underline text text-orange-400 hover:text-orange-600">Week-8 Assignment</Link>
+        <Link href="./week-9/" className="font-mono underline text text-orange-400 hover:text-orange-600">Week-9 Assignment</Link>
       </div>
     </main>
     
