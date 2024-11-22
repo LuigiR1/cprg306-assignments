@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Items from './item';
+import Item from './item';
 
 export default function ItemList({ items, onItemSelect }) {
   const [sortBy, setSortBy] = useState('name');

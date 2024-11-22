@@ -17,7 +17,7 @@ export default function ShoppingListPage() {
     if (!user?.uid) return;
     try {
       const newItemId = await addItem(user.uid, newItem);
-      setItems([...items, { id: newItemId, ...newItem }]);
+      // setItems([...items, { id: newItemId, ...newItem }]);
     } catch (error) {
       console.error("Error adding item:", error);
     }
@@ -44,7 +44,7 @@ export default function ShoppingListPage() {
       {user ? (
         <div className="flex">
           <div>
-            <NewItem onAddItem={handleAddItem} />
+            <NewItem onAddItem={handleAddItem} reloadItemsFunc={loadItems} />
             <ItemList items={items} onItemSelect={handleItemSelect} />
           </div>
           <MealIdeas ingredient={selectedItemName} />

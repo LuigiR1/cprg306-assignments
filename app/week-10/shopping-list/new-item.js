@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export default function NewItem({ onAddItem }) {
+export default function NewItem({ onAddItem, reloadItemsFunc }) {
   const [name, setName] = useState('');
   const [quantity, setQuantity] = useState(1);
   const [category, setCategory] = useState('produce');
@@ -16,9 +16,8 @@ export default function NewItem({ onAddItem }) {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    
     const newItem = {
-      id: Math.random().toString(36).substring(2, 9),  
+      // id: Math.random().toString(36).substring(2, 9),  
       name,
       quantity,
       category
@@ -26,7 +25,7 @@ export default function NewItem({ onAddItem }) {
 
     
     onAddItem(newItem);
-
+    reloadItemsFunc();
     
     setName('');
     setQuantity(1);
